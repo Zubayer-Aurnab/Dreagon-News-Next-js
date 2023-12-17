@@ -14,6 +14,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Link from "next/link";
+import Header from "./Header";
 
 const pages = [
   {
@@ -44,36 +45,39 @@ const pages = [
 
 function NavBar() {
   return (
-    <AppBar position="static" className="bg-black">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Image src={Logo} alt="Logo" />
-          <Box className="w-full text-center space-x-4">
-            {pages.map((page) => (
-              <Link key={page} href={page.pathname}>
-                <Button className="text-white">{page.route}</Button>
-              </Link>
-            ))}
-          </Box>
-          <Box className="">
-            <Stack direction="row" spacing={2}>
-              <IconButton>
-                <FacebookIcon sx={{ color: "white" }} />
-              </IconButton>
-              <IconButton>
-                <YouTubeIcon sx={{ color: "white" }} />
-              </IconButton>
-              <IconButton>
-                <LinkedInIcon sx={{ color: "white" }} />
-              </IconButton>
-              <IconButton>
-                <TwitterIcon sx={{ color: "white" }} />
-              </IconButton>
-            </Stack>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <>
+      <Header />
+      <AppBar position="static" className="bg-black">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Image src={Logo} alt="Logo" />
+            <Box className="w-full text-center space-x-4">
+              {pages.map((page) => (
+                <Link key={page} href={page.pathname}>
+                  <Button className="text-white">{page.route}</Button>
+                </Link>
+              ))}
+            </Box>
+            <Box className="">
+              <Stack direction="row" spacing={2}>
+                <IconButton>
+                  <FacebookIcon sx={{ color: "white" }} />
+                </IconButton>
+                <IconButton>
+                  <YouTubeIcon sx={{ color: "white" }} />
+                </IconButton>
+                <IconButton>
+                  <LinkedInIcon sx={{ color: "white" }} />
+                </IconButton>
+                <IconButton>
+                  <TwitterIcon sx={{ color: "white" }} />
+                </IconButton>
+              </Stack>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </>
   );
 }
 export default NavBar;
