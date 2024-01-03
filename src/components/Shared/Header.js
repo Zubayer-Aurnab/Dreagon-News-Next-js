@@ -8,13 +8,19 @@ const Header = () => {
   return (
     <div>
       <Box className="flex justify-center my-4">
-        
         <Image alt="" src={Head} />
       </Box>
-      <Typography color={"gray"} variant="body2" textAlign={"center"} className="my-2">
-        @2023 . Design by Aurnab
+      <Typography
+        color={"gray"}
+        variant="body2"
+        textAlign={"center"}
+        className="my-2"
+      >
+        @Journalism Without Fear or Favour
       </Typography>
-      <Typography align="center" className="mb-2">{currentDate}</Typography>
+      <Typography align="center" className="mb-2">
+        {currentDate}
+      </Typography>
     </div>
   );
 };
