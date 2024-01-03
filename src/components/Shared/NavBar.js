@@ -27,7 +27,7 @@ const pages = [
   },
   {
     route: "Category",
-    pathname: "/category",
+    pathname: "/categories/news",
   },
   {
     route: "About",
