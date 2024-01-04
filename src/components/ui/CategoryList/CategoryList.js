@@ -5,7 +5,7 @@ const CategoryList = async () => {
   const {data:allCategories} = await getAllCategories();
   console.log(allCategories);
   return <div>
-    categories
+    <h1 className="text-2xl">categories</h1>
   </div>;
 };
 
