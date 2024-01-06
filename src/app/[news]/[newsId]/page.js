@@ -50,7 +50,10 @@ const NewsDetailPage = async ({ params }) => {
                <span>{data.author.name}</span><span>-{data.author.published_date}</span>
               </div>
               <div className="mt-4">
-                <p>{data.details}</p>
+                <p style={{
+                    textAlign:"justify",
+                    whiteSpace:"pre-line"
+                }}>{data.details}</p>
               </div>
             </Grid>
           </Grid>

@@ -47,14 +47,19 @@ function NavBar() {
   return (
     <>
       <Header />
-      <AppBar position="static" className="bg-black">
+      <AppBar
+        position="static"
+        sx={{
+          bgcolor: "black",
+        }}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Image src={Logo} alt="Logo" />
             <Box className="w-full text-center space-x-4">
               {pages.map((page) => (
                 <Link key={page} href={page.pathname}>
-                  <Button className="text-white">{page.route}</Button>
+                  <Button sx={{color:"white"}}>{page.route}</Button>
                 </Link>
               ))}
             </Box>
