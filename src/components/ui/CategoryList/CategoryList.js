@@ -14,10 +14,10 @@ const CategoryList = async () => {
     <Box className="px-5 py-4 mt-5 rounded-lg bg-gray-200">
       <Typography className="text-2xl font-bold">Categories</Typography>
       <Divider />
-      <Stack rowGap={1} sx={{ mt: 2.5 }}>
+      <Stack rowGap={2} sx={{ mt: 2.5 }}>
         {allCategories.map((category) => (
           <Button variant="outlined" key={category.id} className="font-bold">
-            <Link href={category.title}>{category.title}</Link>
+            <Link href={`/categories/news?category=${category.title.toLowerCase()}`}>{category.title}</Link>
           </Button>
         ))}
       </Stack>
