@@ -41,6 +41,10 @@ const pages = [
     route: "Contact",
     pathname: "/contact",
   },
+  {
+    route: "Dashboards",
+    pathname: "/contact",
+  },
 ];
 
 function NavBar() {
